@@ -33,6 +33,9 @@ const fetchShow = () => {
         summary: stripTags(data.summary),
         seasons: formatSeasons(data._embedded.episodes)
       };
+    })
+    .catch(err => {
+      console.log(err)
     });
 };
 
